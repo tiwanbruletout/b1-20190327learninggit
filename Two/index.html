@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Query Demo</title>
+  <style>
+  * { box-sizing: border-box; }
+  .vert { background: #abf01b; }
+  .gris { background: #707070; }
+  .bleu { background: #3493cb; }
+  .grisclair { background: #e3e3e3; }
+
+  div {
+    min-height: 3em;
+    border: 1px solid #fff;
+  }
+  main section:first-child div {
+    min-height: 6em;
+  }
+  main section:nth-child(2) div {
+    min-height: 10em;
+  }
+  header,
+  section {
+    margin-bottom: 1em;
+  }
+  @media screen and (min-width: 768px) {
+    footer {
+      margin: 1em -1%;
+      overflow: hidden;
+    }
+    footer div {
+      float: left;
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    header {
+      margin: 1em -1%;
+      overflow: hidden;
+    }
+    header div {
+      float: left;
+      width: 48%;
+      margin: 0 1%;
+    }
+    main section:nth-child(2) {
+      margin: 1em -1%;
+      overflow: hidden;
+    }
+    main section:nth-child(2) div {
+      float: left;
+      width: 31%;
+      margin: 0 1%;
+    }
+    footer div {
+      float: left;
+      width: 23%;
+      margin: 0 1%;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="vert"></div>
+  <div class="vert"></div>
+</header>
+
+<main>
+  <section>
+    <div class="gris"></div>
+  </section>
+  <section>
+    <div class="bleu"></div>
+    <div class="bleu"></div>
+    <div class="bleu"></div>
+  </section>
+</main>
+<footer>
+  <div class="grisclair"></div>
+  <div class="grisclair"></div>
+  <div class="grisclair"></div>
+  <div class="grisclair"></div>
+</footer>
+</body>
+</html>
